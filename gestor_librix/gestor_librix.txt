@@ -1,0 +1,44 @@
+Autor: Mauricio Castro Leal
+Estudiante de Ingeniería Civil en Informática
+
+Gestor Librix GUI Tkinter (.py)
+
+Nacimiento de Librix:
+Librix es un mini-proyecto cuyo objetivo es desarrollar habilidades relacionadas con el desarrollo de software, 
+a la vez que se practica el uso del lenguaje Python y se profundiza en la biblioteca Tkinter, herramienta utilizada para crear este gestor.
+La idea de creación surgió unos días antes de una reunión con un profesor, quien mencionó la necesidad de cambiar el gestor que utilizaban 
+para manejar la base de datos de estudiantes, que contenía información como nombre, datos personales, notas, asistencia, etc. 
+A raíz de esta conversación y del hecho de que mi madre también es docente, me motivé a desarrollar este proyecto. 
+La idea es crear una herramienta capaz de subir datos a un archivo .CSV en primera instancia. 
+Posteriormente, se integrarán nuevas funcionalidades y, cuando el sistema esté más pulido, se implementará una base de datos (como MySQL) u otra alternativa, 
+con el fin de profundizar en el manejo de gestores de información.
+Sería interesante, en el futuro, ver cómo mis antiguos docentes usan un software creado por mí.
+Funcionalidades:
+
+Librix, creado con Tkinter, es una herramienta que, en su versión inicial, presenta una interfaz simple pero robusta en cuanto a código. 
+Lo primero que vemos es una pantalla de inicio de sesión, donde los usuarios pueden acceder mediante un archivo .CSV (sin encriptar)
+que contiene los nombres de usuario y contraseñas. En un futuro, se implementará la encriptación de las contraseñas 
+(el archivo CSV y el código se encuentran en la misma carpeta). El inicio de sesión incluye una verificación de credenciales.
+
+Luego de iniciar sesión, accedemos al menú de opciones, que incluye botones que nos permiten acceder a las funcionalidades disponibles hasta el momento en Librix. 
+Estas funcionalidades incluyen las siguientes:
+
+    1. Agregar estudiante:
+    Al presionar el botón de agregar, se desplegarán campos de texto (Label y Entry), los cuales se utilizarán para ingresar la información del estudiante, 
+    como su nombre, curso y notas (separadas por comas). Esta información será automáticamente añadida al archivo CSV.
+    Esta opción cuenta con verificaciones para evitar que se ingresen nombres alfanuméricos, lo cual no está permitido. 
+    Además, se valida que todos los campos sean completados antes de proceder.
+
+    2. Mostrar todos los estudiantes:
+    Esta función muestra todos los estudiantes extraídos del .CSV que contiene los registros. A medida que se agregan, modifican o eliminan estudiantes, 
+    la lista se actualiza automáticamente para reflejar los cambios realizados.
+
+    3. Eliminar estudiante:
+    Esta función permite eliminar un estudiante del archivo CSV. Para ello, primero es necesario ingresar el nombre del estudiante que se desea eliminar
+    y presionar el botón para mostrar su información. Al hacerlo, se visualizarán todos los datos asociados a ese estudiante, lo que nos permite confirmar
+    que es el correcto antes de proceder con la eliminación.
+
+    4. Modificar estudiante:
+    Esta función es útil cuando un estudiante cambia de curso o tiene nuevas evaluaciones. Permite buscar al estudiante en el archivo CSV 
+    por su nombre y modificar directamente los campos de información (como curso y notas) a través de los campos Entry. 
+    Luego, los nuevos datos se cargan al archivo y se actualiza el registro del estudiante.
